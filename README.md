@@ -1,7 +1,7 @@
 REFERENFE
 ---
 
-<img src="assets/tampakfs.png" alt="Keterangan Gambar" width="400">
+<img src="assets/referensi.png" alt="Keterangan Gambar" width="400">
 
 ref:https://www.aashishthakuri.com/
 
