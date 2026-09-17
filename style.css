@@ -1,0 +1,330 @@
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@400;600;800&family=Kalam:wght@400;700&display=swap');
+
+        :root {
+            --bg-color: #f4f0e6;
+            --text-dark: #1a1a1a;
+            --accent-blue: #3b68e7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            /* Membuat pola background kertas kotak-kotak */
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+            background-size: 25px 25px;
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* LAYOUT UTAMA (DESKTOP) menggunakan CSS Grid */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            grid-template-areas: 
+                "illus header"
+                "illus footer";
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            min-height: 95vh;
+        }
+
+        /* AREA KONTEN */
+        .header-content {
+            grid-area: header;
+            position: relative;
+        }
+        
+        .illustration-content {
+            grid-area: illus;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-content {
+            grid-area: footer;
+        }
+
+        /* TIPOGRAFI & ELEMEN KECIL */
+        .badge {
+            background-color: var(--accent-blue);
+            color: white;
+            display: inline-block;
+            padding: 5px 10px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            box-shadow: 2px 2px 0px var(--text-dark);
+        }
+
+        /* Label "Every frame is art" */
+        .tape-tag {
+            font-family: 'Kalam', cursive;
+            font-size: 0.8rem;
+            border: 1px solid #d1c8b8;
+            padding: 5px 15px;
+            display: inline-block;
+            background: #fdfbf7;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+            color: #333;
+            /* Posisi Desktop (Pojok Kanan Atas) */
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: rotate(2deg);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        h1 .name {
+            color: var(--accent-blue);
+            font-family: 'Kalam', cursive;
+            font-size: 4rem;
+        }
+
+        .bio-text {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            line-height: 1.3;
+            color: #4a4a4a;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-text p {
+            margin-bottom: 1rem;
+        }
+
+        /* KUTIPAN / QUOTE BOX */
+        .quote-box {
+            /* Gaya Desktop (Berupa Kotak Menimpa Gambar) */
+            position: absolute;
+            bottom: 15%;
+            right: -10%;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #d1c8b8;
+            padding: 10px 15px;
+            transform: rotate(-3deg);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            max-width: 220px;
+            z-index: 2;
+        }
+
+        .main-illustration {
+            width: 100%;
+            max-width: 450px;
+            object-fit: contain;
+        }
+
+        /* BAGIAN PENGALAMAN & SKILL */
+        .exp-skills-section {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-family: 'Kalam', cursive;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .exp-item {
+            display: flex;
+            gap: 15px;
+        }
+
+        .exp-year {
+            color: var(--accent-blue);
+            font-family: 'Kalam', cursive;
+            font-weight: bold;
+            font-size: 1.1rem;
+            min-width: 50px;
+        }
+
+        .exp-details h4 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .exp-details p {
+            font-family: 'Caveat', cursive;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            font-size: 0.9rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* FOTO POLAROID */
+        .polaroid-container {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 10px 10px 35px 10px;
+            box-shadow: 3px 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+            flex: 1;
+            text-align: center;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .polaroid p {
+            font-family: 'Caveat', cursive;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .polaroid::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 40px;
+            height: 15px;
+            background-color: rgba(233, 222, 198, 0.9);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .polaroid:nth-child(1) { transform: rotate(-3deg); }
+        .polaroid:nth-child(2) { transform: rotate(2deg); }
+        .polaroid:nth-child(3) { transform: rotate(-2deg); }
+
+        /* WIDGET POJOK KANAN BAWAH (Seperti Barcode/Musik) */
+        .floating-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #111;
+            border-radius: 12px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+        .bar { width: 3px; height: 12px; background: #666; border-radius: 2px; }
+        .bar.red { background: #e03131; height: 18px; }
+        .bar.white { background: #fff; height: 10px; }
+
+        /* =========================================
+           MEDIA QUERIES UNTUK TAMPILAN MOBILE (HP) 
+           ========================================= */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                /* Mengubah urutan grid: Teks atas -> Gambar -> Teks Bawah */
+                grid-template-areas: 
+                    "header"
+                    "illus"
+                    "footer";
+                padding: 1.5rem;
+                gap: 1rem;
+            }
+
+            h1 { font-size: 2.8rem; }
+            h1 .name { font-size: 3.2rem; display: block; } /* Nama turun ke bawah sedikit */
+
+            /* Tape tag berpindah ke bawah nama pada mobile */
+            .tape-tag {
+                position: static;
+                margin-bottom: 1.5rem;
+                transform: rotate(-1deg);
+            }
+
+            .illustration-content {
+                /* Memutar arah flex agar quote tampil DI ATAS gambar pada HP */
+                flex-direction: column-reverse;
+                margin: 2rem 0;
+            }
+
+            /* Kutipan berubah menjadi teks bergaris bawah biru di HP */
+            .quote-box {
+                position: static;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                transform: none;
+                max-width: 100%;
+                font-family: 'Caveat', cursive;
+                font-size: 1.4rem;
+                color: var(--text-dark);
+                text-decoration: underline;
+                text-decoration-color: var(--accent-blue);
+                text-decoration-thickness: 1.5px;
+                text-underline-offset: 3px;
+                margin-bottom: 1.5rem;
+                padding: 0;
+                align-self: flex-start;
+                text-align: left;
+            }
+
+            .exp-skills-section {
+                flex-direction: column; /* Exp dan Skill menumpuk vertikal */
+                gap: 2rem;
+            }
+
+            .polaroid-container {
+                gap: 10px; /* Jarak antar polaroid mengecil agar muat sebaris */
+            }
+
+            .polaroid {
+                padding: 6px 6px 25px 6px;
+            }
+
+            .polaroid img {
+                height: 80px; /* Tinggi foto mengecil di HP */
+            }
+
+            .polaroid p {
+                font-size: 0.95rem;
+                margin-top: 5px;
+            }
+        }
