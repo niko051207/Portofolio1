@@ -178,7 +178,6 @@
         .polaroid:nth-child(2) { transform: rotate(2deg); }
         .polaroid:nth-child(3) { transform: rotate(-2deg); }
 
-        /* RESPONSIVE DESIGN (MOBILE & TABLET) */
         @media (max-width: 850px) {
             .container { grid-template-columns: 2fr; padding: 2rem 1rem; }
             .tape-tag { float: none; display: inline-block; margin-bottom: 1rem; }
