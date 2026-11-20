@@ -1,0 +1,10 @@
+# Link checker config: https://github.com/lycheeverse/lychee
+exclude_path = ["node_modules"]
+
+exclude = [
+  # The site's own public URLs (canonical, og:url, og:image) only exist after deploy.
+  '^https://niko051207\.github\.io/Portofolio1',
+  # Preconnect hints, not real pages.
+  '^https://fonts\.googleapis\.com/?$',
+  '^https://fonts\.gstatic\.com/?$',
+]

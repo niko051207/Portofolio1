@@ -5,18 +5,28 @@
     --paper-border: #d1c8b8;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-    background: var(--bg-color) linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px) repeat;
-    background-size: 25px 25px;
-    color: var(--text-dark);
-    font-family: 'Inter', sans-serif;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-img { max-width: 100%; display: block; }
+body {
+    background: var(--bg-color) linear-gradient(rgb(0 0 0 / 4%) 1px, transparent 1px) repeat;
+    background-size: 25px 25px;
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+}
 
-ul, ol { list-style: none; }
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
 
 /* MAIN LAYOUT */
 .container {
@@ -42,31 +52,48 @@ ul, ol { list-style: none; }
 }
 
 .tape-tag {
-    font-family: 'Kalam', cursive;
+    font-family: Kalam, cursive;
     font-size: 0.85rem;
     border: 1px solid var(--paper-border);
     padding: 4px 12px;
     background: #fdfbf7;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 5%);
     float: right;
     transform: rotate(2deg);
 }
 
 /* TYPOGRAPHY */
-h1 { font-size: 3rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.2rem; }
-h1 .name { color: var(--accent-blue); font-family: 'Kalam', cursive; font-size: 3.5rem; }
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+}
+
+h1 .name {
+    color: var(--accent-blue);
+    font-family: Kalam, cursive;
+    font-size: 3.5rem;
+}
 
 .bio-text {
-    font-family: 'Caveat', cursive;
+    font-family: Caveat, cursive;
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.35;
     color: #333;
     margin-bottom: 2rem;
 }
-.bio-text p { margin-bottom: 0.8rem; }
 
-.section-title { font-family: 'Kalam', cursive; font-size: 2.2rem; margin-bottom: 1rem; }
+.bio-text p {
+    margin-bottom: 0.8rem;
+}
+
+.section-title {
+    font-family: Kalam, cursive;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
 
 /* ILLUSTRATION & QUOTE STICKER */
 .illustration-col {
@@ -92,7 +119,7 @@ h1 .name { color: var(--accent-blue); font-family: 'Kalam', cursive; font-size: 
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--accent-blue);
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 3px 3px 8px rgb(0 0 0 / 8%);
     transform: rotate(-3deg);
     margin-top: -2rem;
     max-width: 240px;
@@ -107,10 +134,31 @@ h1 .name { color: var(--accent-blue); font-family: 'Kalam', cursive; font-size: 
     margin-bottom: 3rem;
 }
 
-.edu-item { display: flex; gap: 12px; margin-bottom: 1rem; }
-.edu-year { color: var(--accent-blue); font-family: 'Kalam', cursive; font-weight: 700; font-size: 1.2rem; }
-.edu-details h3 { font-family: 'Kalam', cursive; font-size: 1rem; font-weight: 700; }
-.edu-details p { font-family: 'Caveat', cursive; font-size: 1.3rem; color: #555; line-height: 1.1; }
+.edu-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.edu-year {
+    color: var(--accent-blue);
+    font-family: Kalam, cursive;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.edu-details h3 {
+    font-family: Kalam, cursive;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.edu-details p {
+    font-family: Caveat, cursive;
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.1;
+}
 
 .skills-grid {
     display: grid;
@@ -126,7 +174,7 @@ h1 .name { color: var(--accent-blue); font-family: 'Kalam', cursive; font-size: 
     font-weight: 600;
     border-radius: 4px;
     text-align: center;
-    font-family: 'Caveat', cursive;
+    font-family: Caveat, cursive;
 }
 
 /* POLAROID GALLERY */
@@ -138,18 +186,32 @@ h1 .name { color: var(--accent-blue); font-family: 'Kalam', cursive; font-size: 
 
 .polaroid {
     --tilt: 0deg;
+
     background: #fff;
-    padding: 8px 8px 25px 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 8px 8px 25px;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 8%);
     position: relative;
     text-align: center;
     transform: rotate(var(--tilt));
     transition: transform 0.2s ease;
 }
-.polaroid:nth-child(1) { --tilt: -3deg; }
-.polaroid:nth-child(2) { --tilt: 2deg; }
-.polaroid:nth-child(3) { --tilt: -2deg; }
-.polaroid:hover { transform: scale(1.03); z-index: 1; }
+
+.polaroid:nth-child(1) {
+    --tilt: -3deg;
+}
+
+.polaroid:nth-child(2) {
+    --tilt: 2deg;
+}
+
+.polaroid:nth-child(3) {
+    --tilt: -2deg;
+}
+
+.polaroid:hover {
+    transform: scale(1.03);
+    z-index: 1;
+}
 
 .polaroid img {
     width: 100%;
@@ -157,7 +219,13 @@ h1 .name { color: var(--accent-blue); font-family: 'Kalam', cursive; font-size: 
     object-fit: cover;
     background: #eee;
 }
-.polaroid figcaption { font-family: 'Caveat', cursive; margin-top: 8px; font-size: 1.2rem; color: #333; }
+
+.polaroid figcaption {
+    font-family: Caveat, cursive;
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: #333;
+}
 
 /* Sticky tape on top of each polaroid */
 .polaroid::before {
@@ -168,25 +236,58 @@ h1 .name { color: var(--accent-blue); font-family: 'Kalam', cursive; font-size: 
     transform: translateX(-50%) rotate(-2deg);
     width: 35px;
     height: 12px;
-    background: rgba(233, 222, 198, 0.85);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background: rgb(233 222 198 / 85%);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
 }
 
-@media (max-width: 850px) {
-    .container { grid-template-columns: 1fr; padding: 2rem 1rem; }
-    .tape-tag { float: none; display: inline-block; margin-bottom: 1rem; }
-    .main-illustration { max-width: 320px; }
-    .quote-box { transform: rotate(-1deg); }
-    .edu-skills { grid-template-columns: 1fr; gap: 1.5rem; }
+@media (width <= 850px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
+    .tape-tag {
+        float: none;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    .main-illustration {
+        max-width: 320px;
+    }
+
+    .quote-box {
+        transform: rotate(-1deg);
+    }
+
+    .edu-skills {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
 
-@media (max-width: 550px) {
-    h1 { font-size: 2.2rem; }
-    h1 .name { font-size: 2.6rem; display: block; }
-    .gallery { grid-template-columns: 1fr; gap: 1.5rem; }
-    .polaroid img { height: 200px; }
+@media (width <= 550px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h1 .name {
+        font-size: 2.6rem;
+        display: block;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .polaroid img {
+        height: 200px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .polaroid { transition: none; }
+    .polaroid {
+        transition: none;
+    }
 }
